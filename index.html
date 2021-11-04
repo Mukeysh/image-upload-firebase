@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form>
+      <h1>Upload your image</h1>
+      <p>File should be Jpeg, Png....</p>
+      <div class="drag-area" id="drop-area">
+        <p>drag and drop file here</p>
+        <span id="progress"></span>
+        <div id="gallery"></div>
+      </div>
+      <p>or</p>
+      <label for="chooseFile" id="submit">Choose a file</label>
+      <input type="file" name="image" accept="image/*" id="chooseFile" />
+      <a href="" id="download" target="_blank"></a>
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAYUEkLHxdURdtlrx-amkwgQNDhheELGpQ",
+        authDomain: "image-upload-f848a.firebaseapp.com",
+        projectId: "image-upload-f848a",
+        storageBucket: "image-upload-f848a.appspot.com",
+        messagingSenderId: "644541098822",
+        appId: "1:644541098822:web:ff93b3b7f80604f6641347",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //var storage = firebase.storage();
+      // console.log(app.storage());
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
